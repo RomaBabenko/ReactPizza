@@ -1,0 +1,47 @@
+.root {
+  position: relative;
+  
+}
+
+.searchIcon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  left: 10px;
+  top: 10px;
+}
+
+.clearIcon{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  right: 10px;
+  top: 10px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.input {
+  width: 300px;
+  padding: 12px 40px 12px 40px;
+
+  border: 1px solid #00000036;
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  transition: width 0.3s ease, border 0.3s ease;
+
+  &:focus, &:hover {
+    border: solid 1px #000000;
+  }
+}

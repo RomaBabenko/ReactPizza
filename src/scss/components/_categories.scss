@@ -1,0 +1,98 @@
+@import "../variables";
+
+.categories {
+  position: relative;
+
+  &__label {
+    display: none;
+    align-items: center;
+
+    @media (max-width: 1100px) {
+      display: flex;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 50px;
+      border: 1px solid;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color $duration ease-in-out;
+
+      &:hover {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+    z-index: 10;
+
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background-color: darken(#f9f9f9, 2%);
+        }
+
+        &.active {
+          background-color: #282828;
+          font-weight: bold;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .categories__list {
+    display: flex;
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      @include noselect();
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.category {
+}
